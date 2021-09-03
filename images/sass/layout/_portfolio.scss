@@ -1,0 +1,120 @@
+@media screen and (min-width: 768px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+.portfolio__caption {
+  padding: 20px 24px;
+  // border-bottom: 1px solid var(--accent-background-color);
+  // border-left: 1px solid var(--accent-background-color);
+  // border-right: 1px solid var(--accent-background-color);
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__card {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__card {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+.portfolio__link {
+  transition: box-shadow var(--transition-duration) var(--timing-cubic);
+  border-bottom: 1px solid var(--accent-background-color);
+  border-left: 1px solid var(--accent-background-color);
+  border-right: 1px solid var(--accent-background-color);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__card {
+    display: flex;
+  }
+}
+
+.portfolio__img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__img {
+    width: 354px;
+    height: 294px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__img {
+    width: 370px;
+    height: 294px;
+  }
+}
+
+.portfolio__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--dark-background-text-color);
+  background: var(--accent-overlay-color);
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform var(--transition-duration) var(--timing-cubic);
+
+  .portfolio__link:hover &,
+  .portfolio__link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio__title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--heading-color);
+}
+
+.portfolio__description {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--main-text-color);
+}
+
+.abbr {
+  text-transform: uppercase;
+}

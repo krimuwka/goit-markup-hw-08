@@ -1,0 +1,17 @@
+.activity__title,
+.team__title,
+.clients__title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--heading-color);
+}
+
+@media screen and (min-width: 1200px){
+  .activity__title,
+  .team__title,
+  .clients__title {
+    margin-bottom: 50px;
+  }
+}
