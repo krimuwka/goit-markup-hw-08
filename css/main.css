@@ -300,7 +300,14 @@ body.modal-open {
     flex-direction: row;
   }
 }
-
+.header__burger-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+}
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
